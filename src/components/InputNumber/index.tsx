@@ -1,27 +1,26 @@
-import React, { useState } from "react";
-import { StyleProp, StyleSheet, TextInput, TextStyle } from "react-native";
+import React from "react";
+import { StyleProp, TextInput, TextStyle } from "react-native";
 
 interface IProps {
   styles: StyleProp<TextStyle>;
+  value: string;
+  onChangeText?: (text: string) => void;
 }
 
-const verifyPrice = (price: string) => price.match(/^[0-9]*$/);
-const nonLeftZero = (price: string) => price.replace(/^(0)(.+)/, "$2");
-
-export const InputNumber: React.FC<IProps> = ({ styles }) => {
-  const [value, setValue] = useState("0");
+export const InputNumber: React.FC<IProps> = ({
+  styles,
+  value,
+  onChangeText,
+}) => {
+  const convertValue = String(value);
 
   return (
     <TextInput
       keyboardType="numeric"
       selectTextOnFocus
       maxLength={5}
-      onChangeText={(getValue) => {
-        if (verifyPrice(getValue)) {
-          setValue(nonLeftZero(getValue));
-        }
-      }}
-      value={value}
+      onChangeText={onChangeText}
+      value={convertValue}
       style={styles}
     />
   );

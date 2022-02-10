@@ -40,11 +40,16 @@ export const styles = (props?: IProps) => {
     action: {
       flexDirection: "row",
       alignItems: "center",
+      paddingVertical: 8,
     },
     label: {
       fontSize: 12,
       fontWeight: "600",
       marginRight: 10,
+    },
+    labelTotal: {
+      fontSize: 14,
+      fontWeight: "600",
     },
     input: {
       textAlign: "center",
@@ -65,8 +70,8 @@ export const styles = (props?: IProps) => {
     buttonText: {
       color: button === "outlined" ? colors.green : colors.white,
     },
-  })
-}
+  });
+};
 
 styles.defaultProps = {
   button: "primary",
