@@ -2,7 +2,7 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { KeyboardAvoidingView, Platform, SafeAreaView } from "react-native";
 
-import { Services } from "./src/screens/Services";
+import Routes from "./src/routes";
 import { colors, theme } from "./src/theme/global";
 
 import "intl";
@@ -17,7 +17,7 @@ export default function App() {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={theme.container}
       >
-        <Services />
+        <Routes />
       </KeyboardAvoidingView>
       <StatusBar style="light" backgroundColor={colors.yankees} />
     </SafeAreaView>
