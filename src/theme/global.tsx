@@ -14,7 +14,6 @@ export const colors = {
 export const theme = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
   },
   horizontalSpacing: {
     paddingHorizontal: 16,
