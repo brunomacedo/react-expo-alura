@@ -49,7 +49,7 @@ export default function Card({
             <View style={{ flex: 1 }}>
               <View style={loadStyles.action}>
                 <Text style={loadStyles.label}>Quantity:</Text>
-                <View style={{ flex: 1 }}>
+                <View>
                   <InputNumber
                     onChangeText={handleUpdateQuantity}
                     value={String(quantity)}
