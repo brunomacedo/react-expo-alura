@@ -38,6 +38,7 @@ export default function Card({
     <View style={theme.horizontalSpacing}>
       <TouchableOpacity
         onPress={() => setExpand(!expand)}
+        activeOpacity={1}
         style={[loadStyles.card, boxStyle]}
       >
         <Text style={loadStyles.name}>{name}</Text>
