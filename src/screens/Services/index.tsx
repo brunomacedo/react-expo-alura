@@ -1,6 +1,7 @@
 import React from "react";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 import Card from "../../components/Card";
+import Header from "../../components/Header";
 import { MOCKS } from "../../mocks";
 import { colors, theme } from "../../theme/global";
 
@@ -14,11 +15,7 @@ export function Services() {
         ItemSeparatorComponent={() => <View style={theme.separator} />}
         ListFooterComponent={() => <View style={theme.separator} />}
         stickyHeaderIndices={[0]}
-        ListHeaderComponent={() => (
-          <View style={theme.header}>
-            <Text style={{ color: colors.white, fontSize: 22 }}>Services</Text>
-          </View>
-        )}
+        ListHeaderComponent={() => <Header title="Services" />}
       />
     </View>
   );

@@ -12,8 +12,25 @@ export const colors = {
 };
 
 export const theme = StyleSheet.create({
+  topBgColor: {
+    backgroundColor: colors.yellow,
+  },
+  bottomBgColor: {
+    backgroundColor: colors.yankees,
+  },
   container: {
     flex: 1,
+  },
+  wrapper: {
+    paddingHorizontal: 20,
+  },
+  wrapperText: {
+    fontSize: 16,
+    lineHeight: 23,
+    color: colors.white,
+  },
+  safeAreaBottom: {
+    flex: 0,
   },
   horizontalSpacing: {
     paddingHorizontal: 16,
@@ -22,8 +39,7 @@ export const theme = StyleSheet.create({
     flex: 1,
     padding: 16,
     marginBottom: 16,
-    backgroundColor: colors.yankees,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   separator: {
     marginTop: 8,
